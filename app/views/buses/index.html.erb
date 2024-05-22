@@ -1,14 +1,61 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Buses</h1>
+<h1 class="my-4">Buses</h1>
 
-<div id="buses">
+<div id="buses" class="row">
   <% @buses.each do |bus| %>
-    <%= render bus %>
-    <p>
-      <%= link_to "Show this bus", bus %>
-    </p>
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Bus <%= bus.plate_number %></h5>
+          <p class="card-text">
+            <strong>Body Number:</strong> <%= bus.body_number %><br>
+            <strong>Drivers:</strong> <%= bus.drivers.pluck(:name).join(', ') %>
+          </p>
+          <%= link_to "Show this bus", bus, class: "btn btn-primary" %>
+        </div>
+      </div>
+    </div>
   <% end %>
 </div>
 
-<%= link_to "New bus", new_bus_path %>
+<%= link_to "New bus", new_bus_path, class: "btn btn-success mt-4" %>
+
+<!-- Add the following inline CSS for styling -->
+<style>
+  .my-4 {
+    margin-top: 1.5rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+  .card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+  }
+  .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+  .btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+  }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .col-md-4 {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+    padding: 0.5rem;
+  }
+  .card-body {
+    padding: 1rem;
+  }
+  .card-title {
+    margin-bottom: 0.75rem;
+    font-size: 1.25rem;
+  }
+  .card-text {
+    margin-bottom: 1rem;
+  }
+</style>

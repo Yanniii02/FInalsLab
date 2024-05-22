@@ -1,10 +1,49 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @bus %>
+<h1 class="my-4">Bus Details</h1>
 
-<div>
-  <%= link_to "Edit this bus", edit_bus_path(@bus) %> |
-  <%= link_to "Back to buses", buses_path %>
-
-  <%= button_to "Destroy this bus", @bus, method: :delete %>
+<div class="card mb-4">
+  <div class="card-body">
+    <h5 class="card-title">Bus <%= @bus.plate_number %></h5>
+    <p class="card-text">
+      <strong>Body Number:</strong> <%= @bus.body_number %><br>
+      <strong>Plate Number:</strong> <%= @bus.plate_number %><br>
+      <strong>Drivers:</strong> <%= @bus.drivers.pluck(:name).join(', ') %>
+    </p>
+    <%= link_to "Edit this bus", edit_bus_path(@bus), class: "btn btn-warning" %>
+    <%= link_to "Back to buses", buses_path, class: "btn btn-secondary" %>
+    <%= button_to "Destroy this bus", @bus, method: :delete, class: "btn btn-danger", data: { confirm: "Are you sure?" } %>
+  </div>
 </div>
+
+<style>
+  .my-4 {
+    margin-top: 1.5rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+  .card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  .btn-warning {
+    background-color: #ffc107;
+    border-color: #ffc107;
+  }
+  .btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+  }
+  .btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+  }
+  .card-body {
+    padding: 1.5rem;
+  }
+  .card-title {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+  .card-text {
+    margin-bottom: 1.5rem;
+  }
+</style>
