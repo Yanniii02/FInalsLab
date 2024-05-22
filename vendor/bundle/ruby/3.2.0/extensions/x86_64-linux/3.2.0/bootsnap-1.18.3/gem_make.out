@@ -1,0 +1,22 @@
+current directory: /home/simon/FInalsLab/vendor/bundle/ruby/3.2.0/gems/bootsnap-1.18.3/ext/bootsnap
+/home/simon/.rvm/rubies/ruby-3.2.2/bin/ruby extconf.rb
+checking for fdatasync() in unistd.h... yes
+checking for whether -D_GNU_SOURCE is accepted as CPPFLAGS... yes
+checking for whether -O3 is accepted as CFLAGS... yes
+checking for whether -std=c99 is accepted as CFLAGS... yes
+creating Makefile
+
+current directory: /home/simon/FInalsLab/vendor/bundle/ruby/3.2.0/gems/bootsnap-1.18.3/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20240522-32901-vyzviz sitelibdir\=./.gem.20240522-32901-vyzviz clean
+
+current directory: /home/simon/FInalsLab/vendor/bundle/ruby/3.2.0/gems/bootsnap-1.18.3/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20240522-32901-vyzviz sitelibdir\=./.gem.20240522-32901-vyzviz
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.so
+
+current directory: /home/simon/FInalsLab/vendor/bundle/ruby/3.2.0/gems/bootsnap-1.18.3/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20240522-32901-vyzviz sitelibdir\=./.gem.20240522-32901-vyzviz install
+/usr/bin/install -m 0755 bootsnap.so ./.gem.20240522-32901-vyzviz/bootsnap
+
+current directory: /home/simon/FInalsLab/vendor/bundle/ruby/3.2.0/gems/bootsnap-1.18.3/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20240522-32901-vyzviz sitelibdir\=./.gem.20240522-32901-vyzviz clean

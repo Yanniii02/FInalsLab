@@ -1,0 +1,19 @@
+current directory: /home/simon/FInalsLab/vendor/bundle/ruby/3.2.0/gems/debug-1.9.2/ext/debug
+/home/simon/.rvm/rubies/ruby-3.2.2/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /home/simon/FInalsLab/vendor/bundle/ruby/3.2.0/gems/debug-1.9.2/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20240522-32901-fnikot sitelibdir\=./.gem.20240522-32901-fnikot clean
+
+current directory: /home/simon/FInalsLab/vendor/bundle/ruby/3.2.0/gems/debug-1.9.2/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20240522-32901-fnikot sitelibdir\=./.gem.20240522-32901-fnikot
+compiling debug.c
+compiling iseq_collector.c
+linking shared-object debug/debug.so
+
+current directory: /home/simon/FInalsLab/vendor/bundle/ruby/3.2.0/gems/debug-1.9.2/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20240522-32901-fnikot sitelibdir\=./.gem.20240522-32901-fnikot install
+/usr/bin/install -m 0755 debug.so ./.gem.20240522-32901-fnikot/debug
+
+current directory: /home/simon/FInalsLab/vendor/bundle/ruby/3.2.0/gems/debug-1.9.2/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20240522-32901-fnikot sitelibdir\=./.gem.20240522-32901-fnikot clean
