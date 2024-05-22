@@ -8,6 +8,7 @@ class BusesController < ApplicationController
 
   # GET /buses/1 or /buses/1.json
   def show
+    @bus = Bus.find(params[:id])
   end
 
   # GET /buses/new
